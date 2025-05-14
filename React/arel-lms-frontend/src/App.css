@@ -1,0 +1,94 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  /* height: 40vmin; */
+  pointer-events: none;
+  size: 50px;
+  height: 40px;
+}
+
+/* @media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+} */
+
+.App-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+  padding: 0 20px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+}
+
+.App-header{
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+nav ul{
+  display: flex;
+  gap: 2rem;
+  text-align: center;
+}
+ nav ul li{
+  list-style: none;
+}
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+  
+}
+
+.cards{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 50px;
+
+}
+.card{
+  width: max(400px,30vw);
+  height: 200px;
+  box-shadow: -1px 0 20px rgba(0, 0, 0, 0.4);
+  margin: 20px 10px;
+  border-radius: 8px;
+  border-left: 10px solid sienna;
+}
+
+.card p{
+  text-align: left;
+  padding: 0 10px;
+}
+.cta-btn{
+  padding: 10px 40px;
+  margin: 10px auto 20px auto;
+  background: linear-gradient(rgba(197, 71, 17, 0.708)50%,rgba(183, 55, 0, 0.708)100%);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.235);
+}
+.cta-btn:hover{
+  background: rgba(229, 102, 48, 0.365);
+  color: #fff;
+}
+.App-footer{
+  background: #270447;
+  padding: 20px;
+  color: white;
+}
+.App-footer p{
+  margin: 20px auto 0 auto;
+}
