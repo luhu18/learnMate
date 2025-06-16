@@ -1,0 +1,134 @@
+/* src/styles/Header.module.css */
+
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #f8f8f8;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  position: relative;
+  z-index: 100;
+}
+
+.site-branding .logo {
+  height: 40px;
+}
+
+.site-branding h1 {
+  margin-left: 10px;
+  font-size: 1.5rem;
+  color: #333;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.hamburger-button {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  z-index: 101;
+}
+
+.hamburger-line {
+  width: 25px;
+  height: 3px;
+  background-color: #333;
+  margin: 5px 0;
+  transition: all 0.3s ease;
+}
+
+.hamburger-button[aria-expanded="true"] .hamburger-line:nth-child(1) {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+.hamburger-button[aria-expanded="true"] .hamburger-line:nth-child(2) {
+  opacity: 0;
+}
+.hamburger-button[aria-expanded="true"] .hamburger-line:nth-child(3) {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
+
+.main-nav ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.main-nav li {
+  margin-left: 20px;
+}
+
+.main-nav a {
+  text-decoration: none;
+  color: #555;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.main-nav a:hover {
+  color: #007bff;
+}
+
+.header-actions {
+    display: block;
+}
+
+@media (max-width: 768px) {
+  .site-header {
+    padding: 0.8rem 1rem;
+  }
+
+  .hamburger-button {
+    display: block;
+  }
+
+  .main-nav {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #f8f8f8;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border-top: 1px solid #eee;
+    overflow: hidden;
+
+    max-height: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: max-height 0.5s ease-out, opacity 0.5s ease-out, visibility 0.5s ease-out;
+  }
+
+  .main-nav.is-open { /* This class name is still 'is-open' in CSS */
+    max-height: 300px;
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .main-nav ul {
+    flex-direction: column;
+    width: 100%;
+    padding: 1rem 0;
+  }
+
+  .main-nav li {
+    margin: 0;
+    text-align: center;
+    padding: 0.8rem 0;
+  }
+
+  .main-nav a {
+    display: block;
+    padding: 0.5rem 0;
+  }
+
+  .header-actions {
+      padding: 1rem 0;
+      text-align: center;
+      border-top: 1px solid #eee;
+  }
+}
